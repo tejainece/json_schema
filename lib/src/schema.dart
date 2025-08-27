@@ -119,6 +119,9 @@ class JsonSubSchema {
     allOf: allOf,
   );
 
+  factory JsonSubSchema.boolean({Object? const_}) =>
+      JsonSubSchema(types: [JsonType.boolean], const_: const_);
+
   factory JsonSubSchema.number({
     Object? const_,
     List<dynamic> enum_ = const [],
